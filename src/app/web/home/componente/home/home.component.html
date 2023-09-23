@@ -1,0 +1,35 @@
+<mat-sidenav-container class="container">
+  <mat-sidenav #sidenav class="sidenav">
+    <!-- Contenido del Sidenav aquí -->
+    <mat-chip-listbox
+      class="mat-mdc-chip-set-stacked"
+      aria-label="Color selection"
+    >
+      <mat-chip-option
+        *ngFor="let chip of availableColors"
+        [color]="chip.color"
+        [routerLink]="[chip.route]"
+        (click)="sidenav.toggle()"
+      >
+        {{ chip.name }}
+      </mat-chip-option>
+    </mat-chip-listbox>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="content">
+    <mat-toolbar color="primary" class="toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <!-- <span>Consultec</span> -->
+    </mat-toolbar>
+
+    <!-- Contenido principal de la aplicación -->
+
+      <router-outlet ></router-outlet>
+  
+   
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

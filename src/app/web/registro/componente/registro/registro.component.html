@@ -1,0 +1,130 @@
+
+<h2>{{ titulo }}</h2>
+<app-boton-volver></app-boton-volver>
+<mat-vertical-stepper [linear]="false" #stepper [animationDuration]="duration">
+  <mat-step [stepControl]="datosDelCliente">
+    <form [formGroup]="datosDelCliente">
+      <ng-template matStepLabel>Primer nombre</ng-template>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Primer nombre"
+          formControlName="primerNombre"
+        />
+      </mat-form-field>
+      <div>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+      <mat-step>
+        <ng-template matStepLabel>Segundo Nombre</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Segundo Nombre" formControlName="segundoNombre" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Primer Apellido</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Primer apellido" formControlName="primerApellido" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <mat-step>
+        <ng-template matStepLabel>Segundo Apellido</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Segundo apellido" formControlName="segundoApellido" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+<!-- 
+
+      <mat-step>
+        <ng-template matStepLabel>Edad</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="edad" formControlName="edad" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step> -->
+      <mat-step>
+        <ng-template matStepLabel>Telefono</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Telefono" formControlName="telefono" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Direccion</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Direccion" formControlName="direccion" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Fecha de Nacimiento</ng-template>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Fecha de Nacimiento"
+            formControlName="fechaNacimiento"
+            type="date"
+          />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Correo</ng-template>
+        <mat-form-field>
+          <input matInput placeholder="Correo" formControlName="correo" />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Sucursal</ng-template>
+        <app-filtro formControlName="idSucursal"></app-filtro>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+    </form>
+  </mat-step>
+
+  <mat-step>
+    <ng-template matStepLabel>Done</ng-template>
+    You are now done.
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+      <button mat-button (click)="guardarCliente()" [disabled]="datosDelCliente.invalid">Guardar</button>
+    </div>
+  </mat-step>
+</mat-vertical-stepper>
+
+

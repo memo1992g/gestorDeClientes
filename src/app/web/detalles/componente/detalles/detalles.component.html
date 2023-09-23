@@ -1,0 +1,22 @@
+<app-boton-volver></app-boton-volver>
+
+<mat-card class="cliente-card">
+    <div class="cliente-avatar">
+      <mat-icon class="avatar-icon">face</mat-icon>
+    </div>
+    <mat-card-content>
+      <mat-card-title>{{ detalleCliente.primerNombre}} {{detalleCliente.segundoNombre}} {{detalleCliente.primerApellido}} {{detalleCliente.segundoApellido }}</mat-card-title>
+      <p><strong>ID:</strong> {{ detalleCliente.idCliente }}</p>
+      <p><strong>Email:</strong> {{ detalleCliente.correo }}</p>
+      <p><strong>TELEFONO:</strong> {{ detalleCliente.telefono }}</p>
+      <p><strong>Direccion:</strong> {{ detalleCliente.direccion }}</p>
+      <p><strong>Fecha de Nacimiento:</strong> {{ detalleCliente.fechaNacimiento }}</p>
+    
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button color="primary" [routerLink]="['/editar',detalleCliente.idCliente]">Editar</button>
+      <button mat-button color="warn" (click)="eliminarCliente(detalleCliente.idCliente)">Eliminar</button>
+    </mat-card-actions>
+  </mat-card>
+
+  

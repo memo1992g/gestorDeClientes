@@ -1,0 +1,11 @@
+
+
+
+<mat-form-field>
+  <mat-label>Sucursales</mat-label>
+  <mat-select >
+    <mat-option [value]="sucursal.nombre  " *ngFor="let sucursal of sucursales" (click)="editSelect(sucursal.id_sucursal)">
+      {{sucursal.nombre}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>

@@ -1,0 +1,41 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 40% 30%;
+    grid-template-areas:
+      "h1"
+      "img"
+      "buttons";
+      height: 100vh;
+      justify-items: center;
+      
+  }
+  
+  h1 {
+    grid-area: h1;
+    display: grid;
+    align-content: center;
+    color: whitesmoke;
+    font-size: 5rem;
+    line-height: 5rem;
+    text-align: center;
+  }
+  
+  img {
+    grid-area: img;
+  }
+  .buttons{
+      display: grid;
+      grid-area: buttons;
+  
+  }
+  
+  .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary {
+      background-color: #dc1e26;
+      height: grid;
+      border: 15px solid white;
+      height: fit-content;
+      align-self: center;
+  
+  }
+  

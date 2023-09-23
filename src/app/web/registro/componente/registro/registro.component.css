@@ -1,0 +1,19 @@
+.posicionDelFormulario{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;
+}
+
+/* Estilo para el elemento h2 */
+h2 {
+    font-size: 24px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita para un aspecto formal */
+    margin-bottom: 10px; /* Espacio en la parte inferior para separación */
+    /* Otros estilos opcionales */
+    color: #333; /* Color de texto */
+    text-align: center;
+    margin-top:5%
+    /* Agrega cualquier otro estilo que desees */
+  }
+  

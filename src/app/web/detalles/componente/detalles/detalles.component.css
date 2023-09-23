@@ -1,0 +1,44 @@
+/* Estilos para la tarjeta del cliente */
+.cliente-card {
+    width: 300px;
+    margin: 16px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilos para el avatar */
+  .cliente-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .avatar-icon {
+    font-size: 64px; /* Ajusta el tamaño del ícono según tus preferencias */
+  }
+  
+  /* Estilos para el título */
+  mat-card-title {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  /* Estilos para los botones */
+  mat-card-actions button {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .mat-icon {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 10em;
+   
+}
